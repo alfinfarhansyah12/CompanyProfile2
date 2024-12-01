@@ -104,7 +104,7 @@
                                 data-width="['550','550','550','550','300']" data-height="none" data-whitespace="normal"
                                 data-type="text" data-responsive_offset="on"
                                 data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                                data-textAlign="['left','left','left','left']">Spend Quality Holidays With Us </div>
+                                data-textAlign="['left','left','left','left']">"Membangun Rumah Impian Anda, Menjadi Kenyataan" </div>
 
                             <div class="tp-caption tp-resizeme secand_text" id="slide-1587-layer-2"
                                 data-x="['left','left','left','15','0']" data-hoffset="['0','0','0','0']"
@@ -113,7 +113,7 @@
                                 data-width="['550','550','550','550','300']" data-height="none" data-whitespace="normal"
                                 data-type="text" data-responsive_offset="on" data-transform_idle="o:1;"
                                 data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
-                                We welcome you for an endless journey of happiness and tranquility on your trip.
+                                <!-- "Menciptakan Hunian Nyaman dan Tahan Lama untuk Keluarga Anda" -->
                             </div>
 
                             <div class="tp-caption tp-resizeme slider_button" id="slide-1588-layer-3"
@@ -146,7 +146,8 @@
                                 data-width="['630','630','630','630']" data-height="none" data-whitespace="normal" data-type="text"
                                 data-responsive_offset="on"
                                 data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                                data-textAlign="['left','left','left','left']">Explore & Enjoy With Shivneri Fort Valley</div>
+                                data-textAlign="['left','left','left','left']">"Mewujudkan Rumah Ideal Anda, Dari Konsep Hingga Kunci"
+                            </div>
 
                             <div class="tp-caption tp-resizeme secand_text" id="slide-1590-layer-2"
                                 data-x="['left','left','left','15','0']" data-hoffset="['0','0','0','0']"
@@ -156,8 +157,7 @@
                                 data-type="text" data-responsive_offset="on" data-transform_idle="o:1;"
                                 data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
                                 <!-- Slope mornings are excellent… particularly in case you're awakening in one of our lodging's refined rooms! -->
-                                Live life at its peak at Shivneri Fort Valley Resort, where the air is soothing and the view is
-                                breathtaking. Rejuvenate your soul in the nature's embrace.
+                                <!-- "Bersama Kami, Mewujudkan Hunian Impian Anda dengan Detail yang Sempurna" -->
                             </div>
 
                             <div class="tp-caption tp-resizeme slider_button" id="slide-1591-layer-3"
@@ -682,24 +682,24 @@
         <!--================End Video Area =================-->
 
         <!--================Fun Fact Area =================-->
-        <section class="fun_fact_area">
+        <section class="fun_fact_area about_fun_fact">
             <div class="container">
                 <div class="row">
                     <div class="fun_fact_box row m0">
                         <div class="col-md-3 col-sm-6">
                             <div class="media">
                                 <div class="media-left">
-                                    <h3 class="counter">712</h3>
+                                    <h3 class="counter">30</h3>
                                 </div>
                                 <div class="media-body">
-                                    <h4>new <br />Visitors</h4>
+                                    <h4>new <br /> friendships</h4>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <div class="media">
                                 <div class="media-left">
-                                    <h3 class="counter">254</h3>
+                                    <h3 class="counter">8</h3>
                                 </div>
                                 <div class="media-body">
                                     <h4>International <br /> Guests</h4>
@@ -709,23 +709,23 @@
                         <div class="col-md-3 col-sm-6">
                             <div class="media">
                                 <div class="media-left">
-                                    <h3 class="counter">430</h3>
+                                    <h3 class="counter">80</h3>
                                 </div>
                                 <div class="media-body">
                                     <h4>five stars <br /> rating</h4>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="media">
-                                <div class="media-left">
-                                    <h3 class="counter">782</h3>
-                                </div>
-                                <div class="media-body">
-                                    <h4>Served <br /> Breakfast</h4>
-                                </div>
+                        <!-- <div class="col-md-3 col-sm-6">
+                        <div class="media">
+                            <div class="media-left">
+                                <h3 class="counter">30</h3>
+                            </div>
+                            <div class="media-body">
+                                <h4>Served <br /> Breakfast</h4>
                             </div>
                         </div>
+                    </div> -->
                     </div>
                 </div>
 

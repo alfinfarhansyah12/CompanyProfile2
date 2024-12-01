@@ -201,7 +201,7 @@
                     <div class="col-md-3 col-sm-6">
                         <div class="media">
                             <div class="media-left">
-                                <h3 class="counter">712</h3>
+                                <h3 class="counter">30</h3>
                             </div>
                             <div class="media-body">
                                 <h4>new <br /> friendships</h4>
@@ -211,7 +211,7 @@
                     <div class="col-md-3 col-sm-6">
                         <div class="media">
                             <div class="media-left">
-                                <h3 class="counter">254</h3>
+                                <h3 class="counter">8</h3>
                             </div>
                             <div class="media-body">
                                 <h4>International <br /> Guests</h4>
@@ -221,23 +221,23 @@
                     <div class="col-md-3 col-sm-6">
                         <div class="media">
                             <div class="media-left">
-                                <h3 class="counter">430</h3>
+                                <h3 class="counter">80</h3>
                             </div>
                             <div class="media-body">
                                 <h4>five stars <br /> rating</h4>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6">
+                    <!-- <div class="col-md-3 col-sm-6">
                         <div class="media">
                             <div class="media-left">
-                                <h3 class="counter">782</h3>
+                                <h3 class="counter">30</h3>
                             </div>
                             <div class="media-body">
                                 <h4>Served <br /> Breakfast</h4>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
