@@ -59,10 +59,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 
   <style>
-    .icon-small {
-      font-size: 16px;
-      /* Ukuran ikon lebih kecil */
-    }
+  .icon-small {
+    font-size: 16px;
+    /* Ukuran ikon lebih kecil */
+  }
   </style>
 
 
@@ -96,6 +96,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div id="tabbed_box" class="tabbed_box">
 
           <h4>View Orders Information</h4>
+          <B style="color:red">FIX BIAR NYAMBUNG KE BAGIAN INDEX.PHP</B>
+          <!-- ALFIN -->
           <hr />
 
           <!-- Form Pencarian -->
@@ -169,70 +171,70 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 $formatted_datetime
                               );
                           ?>
-                              <tr style="<?php echo $rowStyle; ?>">
-                                <td><?php echo $row['order_id']; ?></td>
-                                <td><?php echo $row['customer_name']; ?></td>
-                                <td><?php echo $row['customer_email']; ?></td>
-                                <td><button type="button" class="" data-toggle="tooltip" data-placement="top"
-                                    title="<?php echo $row['updated_by']; ?>">
-                                    <?php echo $row['updated_by'] ?>
-                                  </button>
-                                </td>
-                                <td style="color: green;">Rp <?php echo number_format($row['order_total'], 0, ',', '.'); ?>
-                                <td><?php echo $formatted_datetime; ?></td>
+                          <tr style="<?php echo $rowStyle; ?>">
+                            <td><?php echo $row['order_id']; ?></td>
+                            <td><?php echo $row['customer_name']; ?></td>
+                            <td><?php echo $row['customer_email']; ?></td>
+                            <td><button type="button" class="" data-toggle="tooltip" data-placement="top"
+                                title="<?php echo $row['updated_by']; ?>">
+                                <?php echo $row['updated_by'] ?>
+                              </button>
+                            </td>
+                            <td style="color: green;">Rp <?php echo number_format($row['order_total'], 0, ',', '.'); ?>
+                            <td><?php echo $formatted_datetime; ?></td>
 
-                                <td>
-                                  <?php if (!empty($row['customer_status'])) : ?>
-                                    <?php if ($row['customer_status'] == "Accept") : ?>
-                                      <button class="btn btn-sm btn-primary">
-                                        <?php echo $row['customer_status']; ?>
-                                      </button>
-                                    <?php elseif ($row['customer_status'] == "Success") : ?>
-                                      <button class="btn btn-sm btn-success">
-                                        <?php echo $row['customer_status']; ?>
-                                      </button>
-                                    <?php elseif ($row['customer_status'] == "Ordering") : ?>
-                                      <button class="btn btn-sm btn-warning">
-                                        <?php echo $row['customer_status']; ?>
-                                      </button>
-                                    <?php elseif ($row['customer_status'] == "Pending") : ?>
-                                      <button class="btn btn-sm btn-info">
-                                        <?php echo $row['customer_status']; ?>
-                                      </button>
-                                    <?php endif; ?>
-                                  <?php else : ?>
-                                    <!-- apabila terjadi error -->
-                                    <button class="btn btn-sm btn-danger">
-                                      Check Database
-                                    </button>
-                                  <?php endif; ?>
-                                </td>
+                            <td>
+                              <?php if (!empty($row['customer_status'])) : ?>
+                              <?php if ($row['customer_status'] == "Accept") : ?>
+                              <button class="btn btn-sm btn-primary">
+                                <?php echo $row['customer_status']; ?>
+                              </button>
+                              <?php elseif ($row['customer_status'] == "Success") : ?>
+                              <button class="btn btn-sm btn-success">
+                                <?php echo $row['customer_status']; ?>
+                              </button>
+                              <?php elseif ($row['customer_status'] == "Ordering") : ?>
+                              <button class="btn btn-sm btn-warning">
+                                <?php echo $row['customer_status']; ?>
+                              </button>
+                              <?php elseif ($row['customer_status'] == "Pending") : ?>
+                              <button class="btn btn-sm btn-info">
+                                <?php echo $row['customer_status']; ?>
+                              </button>
+                              <?php endif; ?>
+                              <?php else : ?>
+                              <!-- apabila terjadi error -->
+                              <button class="btn btn-sm btn-danger">
+                                Check Database
+                              </button>
+                              <?php endif; ?>
+                            </td>
 
-                                <td>
-                                  <div class="btn-group gap-1" role="group" aria-label="Button group with icons">
-                                    <!-- Visibility Button with Link -->
-                                    <a class="btn btn-primary btn-sm"
-                                      href="view_orderItems.php?id=<?php echo $row['order_id'] ?>"
-                                      id="<?php echo $row['order_id'] ?>">
-                                      <span class="material-icons icon-small">visibility</span>
-                                    </a>
-                                    <!-- Edit Button -->
-                                    <button type="button" class="btn btn-warning btn-sm edit-btn" data-bs-toggle="modal"
-                                      data-bs-target="#editModal" data-id="<?php echo $row['order_id']; ?>"
-                                      data-name="<?php echo $row['customer_name']; ?>"
-                                      data-email="<?php echo $row['customer_email']; ?>"
-                                      data-pelayan="<?php echo $row['updated_by']; ?>"
-                                      data-total="<?php echo $row['order_total']; ?>"
-                                      data-status="<?php echo $row['customer_status']; ?>">
-                                      <span class="material-icons icon-small">edit</span>
-                                    </button>
-                                    <!-- Delete Button -->
-                                    <a class="btn btn-danger btn-sm delete_order" id="<?php echo $row['order_id'] ?>">
-                                      <span class="material-icons icon-small">delete</span>
-                                    </a>
-                                  </div>
-                                </td>
-                                <!-- <td>
+                            <td>
+                              <div class="btn-group gap-1" role="group" aria-label="Button group with icons">
+                                <!-- Visibility Button with Link -->
+                                <a class="btn btn-primary btn-sm"
+                                  href="view_orderItems.php?id=<?php echo $row['order_id'] ?>"
+                                  id="<?php echo $row['order_id'] ?>">
+                                  <span class="material-icons icon-small">visibility</span>
+                                </a>
+                                <!-- Edit Button -->
+                                <button type="button" class="btn btn-warning btn-sm edit-btn" data-bs-toggle="modal"
+                                  data-bs-target="#editModal" data-id="<?php echo $row['order_id']; ?>"
+                                  data-name="<?php echo $row['customer_name']; ?>"
+                                  data-email="<?php echo $row['customer_email']; ?>"
+                                  data-pelayan="<?php echo $row['updated_by']; ?>"
+                                  data-total="<?php echo $row['order_total']; ?>"
+                                  data-status="<?php echo $row['customer_status']; ?>">
+                                  <span class="material-icons icon-small">edit</span>
+                                </button>
+                                <!-- Delete Button -->
+                                <a class="btn btn-danger btn-sm delete_order" id="<?php echo $row['order_id'] ?>">
+                                  <span class="material-icons icon-small">delete</span>
+                                </a>
+                              </div>
+                            </td>
+                            <!-- <td>
                               <?php if ($row['customer_status'] == "Accept") : ?>
                               <button class="success_order" id="<?php echo $row['order_id'] ?>">
                                 <span type="button" class="btn-sm btn-success">Success</span>
@@ -246,18 +248,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <span type="button" class="btn-sm btn-primary">Accept</span>
                               </button>
                               <?php endif; ?> -->
-                                <!-- apabila dibutuhkan -->
-                                <!-- <button class="delete_order" id="<?php echo $row['order_id'] ?>">
+                            <!-- apabila dibutuhkan -->
+                            <!-- <button class="delete_order" id="<?php echo $row['order_id'] ?>">
 														<span class="btn-sm btn-danger">Delete</span>
 													</button> -->
-                              <?php } ?>
+                            <?php } ?>
                             <?php
                           } else {
                             ?>
-                              <tr>
-                                <td colspan="8" class="text-center fw-bold">Data tidak ditemukan</td>
-                              </tr>
-                            <?php
+                          <tr>
+                            <td colspan="8" class="text-center fw-bold">Data tidak ditemukan</td>
+                          </tr>
+                          <?php
                           }
                             ?>
                         </tbody>
@@ -334,75 +336,75 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <script src="../js/update_delete.js" type="text/javascript"></script>
 
   <script>
-    document.getElementById('clearSearch').addEventListener('click', function() {
-      document.getElementById('searchInput').value = '';
+  document.getElementById('clearSearch').addEventListener('click', function() {
+    document.getElementById('searchInput').value = '';
+  });
+
+  <?php if ($search) : ?>
+  Swal.fire({
+    title: "Search Results",
+    text: "Displaying results for '<?php echo $search; ?>'",
+    icon: "info",
+    confirmButtonText: "OK",
+    timer: 2000, // Menampilkan notifikasi selama 2 detik
+    timerProgressBar: true
+  });
+  <?php endif; ?>
+
+  // Mengisi form edit dengan data yang sesuai
+  $(document).on("click", ".edit-btn", function() {
+    var orderId = $(this).data('id');
+    var customerName = $(this).data('name');
+    var customerEmail = $(this).data('email');
+    var orderTotal = $(this).data('total');
+    var customerStatus = $(this).data('status');
+    var pelayan = $(this).data('pelayan');
+
+    $("#editOrderId").val(orderId);
+    $("#editName").val(customerName);
+    $("#editEmail").val(customerEmail);
+    $("#editTotal").val(orderTotal);
+    $("#editStatus").val(customerStatus);
+    $('#editPelayan').val(pelayan);
+
+    // Update judul modal dengan ID order
+    $("#orderIdPlaceholder").text(orderId);
+  });
+
+  $(document).on("submit", "#editForm", function(event) {
+    event.preventDefault(); // Mencegah pengiriman form secara default
+
+    var form = $(this);
+    var formData = form.serialize(); // Mengambil data dari form
+
+    $.ajax({
+      type: "POST",
+      url: form.attr("action"), // URL untuk mengirim data form
+      data: formData,
+      success: function(response) {
+        // Menampilkan notifikasi berhasil
+        Swal.fire({
+          title: 'Success!',
+          text: 'Order has been updated successfully.',
+          icon: 'success',
+          confirmButtonText: 'OK',
+          timer: 2000, // Menampilkan notifikasi selama 2 detik
+          timerProgressBar: true
+        }).then(function() {
+          window.location.href = 'view_orders.php?success=1';
+        });
+      },
+      error: function(xhr, status, error) {
+        // Menampilkan notifikasi gagal
+        Swal.fire({
+          title: 'Error!',
+          text: 'Failed to update the order. Please try again.',
+          icon: 'error',
+          confirmButtonText: 'OK'
+        });
+      }
     });
-
-    <?php if ($search) : ?>
-      Swal.fire({
-        title: "Search Results",
-        text: "Displaying results for '<?php echo $search; ?>'",
-        icon: "info",
-        confirmButtonText: "OK",
-        timer: 2000, // Menampilkan notifikasi selama 2 detik
-        timerProgressBar: true
-      });
-    <?php endif; ?>
-
-    // Mengisi form edit dengan data yang sesuai
-    $(document).on("click", ".edit-btn", function() {
-      var orderId = $(this).data('id');
-      var customerName = $(this).data('name');
-      var customerEmail = $(this).data('email');
-      var orderTotal = $(this).data('total');
-      var customerStatus = $(this).data('status');
-      var pelayan = $(this).data('pelayan');
-
-      $("#editOrderId").val(orderId);
-      $("#editName").val(customerName);
-      $("#editEmail").val(customerEmail);
-      $("#editTotal").val(orderTotal);
-      $("#editStatus").val(customerStatus);
-      $('#editPelayan').val(pelayan);
-
-      // Update judul modal dengan ID order
-      $("#orderIdPlaceholder").text(orderId);
-    });
-
-    $(document).on("submit", "#editForm", function(event) {
-      event.preventDefault(); // Mencegah pengiriman form secara default
-
-      var form = $(this);
-      var formData = form.serialize(); // Mengambil data dari form
-
-      $.ajax({
-        type: "POST",
-        url: form.attr("action"), // URL untuk mengirim data form
-        data: formData,
-        success: function(response) {
-          // Menampilkan notifikasi berhasil
-          Swal.fire({
-            title: 'Success!',
-            text: 'Order has been updated successfully.',
-            icon: 'success',
-            confirmButtonText: 'OK',
-            timer: 2000, // Menampilkan notifikasi selama 2 detik
-            timerProgressBar: true
-          }).then(function() {
-            window.location.href = 'view_orders.php?success=1';
-          });
-        },
-        error: function(xhr, status, error) {
-          // Menampilkan notifikasi gagal
-          Swal.fire({
-            title: 'Error!',
-            text: 'Failed to update the order. Please try again.',
-            icon: 'error',
-            confirmButtonText: 'OK'
-          });
-        }
-      });
-    });
+  });
   </script>
 
 </body>

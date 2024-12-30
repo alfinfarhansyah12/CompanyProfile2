@@ -218,6 +218,8 @@ if (!isset($_SESSION['manager_id']) && !isset($_SESSION['admin_id'])) {
               </div>
             </div>
           </div>
+          <B style="color:red">BENAHIN BAGIAN DASHBOARD</B>
+          <!-- ALFIN -->
         </div>
       </div>
     </div>

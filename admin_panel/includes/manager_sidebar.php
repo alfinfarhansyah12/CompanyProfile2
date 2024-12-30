@@ -24,10 +24,6 @@ $orderCount = $orderCountRow['orderCount'];
     </li>
 
     <li class="">
-      <a href="manager_administrators.php"><i class="material-icons">people</i><span>Administrators</span></a>
-    </li>
-
-    <li class="">
       <a href="manager_team.php"><i class="material-icons">people</i><span>Data Rumah</span></a>
     </li>
 
