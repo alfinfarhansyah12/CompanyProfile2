@@ -109,12 +109,13 @@ if (!isset($_SESSION['admin_id'])) {
 															<td><?php echo $row['customer_email']; ?></td>
 															<td><?php echo $row['customer_phone']; ?></td>
 															<td><?php echo $row['customer_address']; ?></td>
-															<td style="color: green;">Rp <?php echo $row['order_total']; ?></td>
 															<td><?php echo $row['order_date']; ?></td>
 
 															<td>
-																<a class="view_orderInfo" id="<?php echo $row['order_id'] ?>" href="view_orderItems.php?id=<?php echo $row['order_id'] ?>">
-																	<span class="iconify-inline" data-icon="akar-icons:eye" style="color: blue;" data-width="30"></span>
+																<a class="view_orderInfo" id="<?php echo $row['order_id'] ?>"
+																	href="view_orderItems.php?id=<?php echo $row['order_id'] ?>">
+																	<span class="iconify-inline" data-icon="akar-icons:eye" style="color: blue;"
+																		data-width="30"></span>
 																</a>
 															</td>
 														<?php } ?>

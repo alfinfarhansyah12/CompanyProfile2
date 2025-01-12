@@ -286,6 +286,7 @@ $(document).ready(function () {
     mandi = $("#mandi_" + id).text();
     mobil = $("#mobil_" + id).text();
     att = $("#att_" + id).text();
+    note = $("#note_" + id).text();
 
     $("#NAME").text("Update Member - id:" + id);
 
@@ -300,6 +301,7 @@ $(document).ready(function () {
     $("#mm").val(mandi);
     $("#mmb").val(mobil);
     $("#mat").val(att);
+    $("#mnote").val(note);
 
     $("#add_modal").modal("show");
   });

@@ -1,8 +1,8 @@
 <?php session_start();
 
 if (!isset($_SESSION['admin_id'])) {
-	header("location:../index.php");
-	exit();
+  header("location:../index.php");
+  exit();
 }
 ?>
 
@@ -34,46 +34,46 @@ if (!isset($_SESSION['admin_id'])) {
 
 <body>
   <?php
-	include_once('../../database/koneksi.php');
+  include_once('../../database/koneksi.php');
 
-	if (isset($_POST["update_info"])) {
+  if (isset($_POST["update_info"])) {
 
-		$del = trim($_POST['del']);
+    $del = trim($_POST['del']);
 
-		$query = "UPDATE delivery set delivery_cost=$del WHERE delivery_id=1";
+    $query = "UPDATE delivery set delivery_cost=$del WHERE delivery_id=1";
 
-		mysqli_query($conn, $query);
-		header("Refresh: 0;");
-	}
-	if (isset($_POST["update_cinfo"])) {
+    mysqli_query($conn, $query);
+    header("Refresh: 0;");
+  }
+  if (isset($_POST["update_cinfo"])) {
 
-		$price = trim($_POST['cp']);
+    $price = trim($_POST['cp']);
 
-		$id = $_POST['hidden_id'];
+    $id = $_POST['hidden_id'];
 
-		$query = "UPDATE currency set  convert_price='" . $price . "' WHERE currency_id=$id";
+    $query = "UPDATE currency set  convert_price='" . $price . "' WHERE currency_id=$id";
 
-		mysqli_query($conn, $query);
-		header("Refresh: 0;");
-	}
-
-
-	if (isset($_POST["update_cinfo2"])) {
-
-		$to = trim($_POST['to']);
-		$price = trim($_POST['cp']);
-
-		$id = $_POST['hidden_id'];
+    mysqli_query($conn, $query);
+    header("Refresh: 0;");
+  }
 
 
-		$query = "INSERT INTO `currency` (`from_currency`,`to_currency`, `convert_price`) 
+  if (isset($_POST["update_cinfo2"])) {
+
+    $to = trim($_POST['to']);
+    $price = trim($_POST['cp']);
+
+    $id = $_POST['hidden_id'];
+
+
+    $query = "INSERT INTO `currency` (`from_currency`,`to_currency`, `convert_price`) 
                 VALUES ('$','$to','$price')";
 
-		mysqli_query($conn, $query);
-		header("Refresh: 0;");
-	}
+    mysqli_query($conn, $query);
+    header("Refresh: 0;");
+  }
 
-	?>
+  ?>
 
 
 
@@ -84,16 +84,16 @@ if (!isset($_SESSION['admin_id'])) {
     <?php
 
 
-		// sidebar
-		include('../includes/admin_sidebar.php'); ?>
+    // sidebar
+    include('../includes/admin_sidebar.php'); ?>
 
 
     <div id="content">
 
       <?php
-			$section = "Dashboard";
+      $section = "Dashboard";
 
-			include('../includes/top_navbar.php'); ?>
+      include('../includes/top_navbar.php'); ?>
 
       <div class="main-content">
 
@@ -101,10 +101,10 @@ if (!isset($_SESSION['admin_id'])) {
           <div class="col-lg-3 col-md-6 col-sm-6">
             <?php
 
-						$result = mysqli_query($conn, "SELECT count(*) as nb FROM review_table");
-						$row = mysqli_fetch_assoc($result);
+            $result = mysqli_query($conn, "SELECT count(*) as nb FROM review_table");
+            $row = mysqli_fetch_assoc($result);
 
-						?>
+            ?>
             <div class="card card-stats">
               <div class="card-header">
                 <div class="icon icon-warning">
@@ -127,10 +127,10 @@ if (!isset($_SESSION['admin_id'])) {
           <div class="col-lg-3 col-md-6 col-sm-6">
             <?php
 
-						$result = mysqli_query($conn, "SELECT count(*) as nb FROM orderinfo");
-						$row = mysqli_fetch_assoc($result);
+            $result = mysqli_query($conn, "SELECT count(*) as nb FROM orderinfo");
+            $row = mysqli_fetch_assoc($result);
 
-						?>
+            ?>
 
             <div class="card card-stats">
               <div class="card-header">
@@ -155,10 +155,10 @@ if (!isset($_SESSION['admin_id'])) {
           <div class="col-lg-3 col-md-6 col-sm-6">
             <?php
 
-						$result = mysqli_query($conn, "SELECT SUM(order_total) as nb FROM orderinfo");
-						$row = mysqli_fetch_assoc($result);
+            $result = mysqli_query($conn, "SELECT SUM(order_total) as nb FROM orderinfo");
+            $row = mysqli_fetch_assoc($result);
 
-						?>
+            ?>
             <div class="card card-stats">
               <div class="card-header">
                 <div class="icon icon-success">
@@ -168,7 +168,7 @@ if (!isset($_SESSION['admin_id'])) {
               </div>
               <div class="card-content">
                 <p class="category"><strong>Revenue</strong></p>
-                <h5 class="card-title " style="color: green;">Rp <?php echo $row['nb']	 ?></h5>
+                <h5 class="card-title " style="color: green;">Rp <?php echo $row['nb']   ?></h5>
               </div>
               <div class="card-footer">
                 <div class="stats">
@@ -180,10 +180,10 @@ if (!isset($_SESSION['admin_id'])) {
           <div class="col-lg-3 col-md-6 col-sm-6">
             <?php
 
-						$result = mysqli_query($conn, "SELECT count(distinct customer_name) as nb FROM orderinfo;");
-						$row = mysqli_fetch_assoc($result);
+            $result = mysqli_query($conn, "SELECT count(distinct customer_name) as nb FROM orderinfo;");
+            $row = mysqli_fetch_assoc($result);
 
-						?>
+            ?>
             <div class="card card-stats">
               <div class="card-header">
                 <div class="icon icon-info">

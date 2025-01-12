@@ -14,12 +14,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $customer_email = $_POST['customer_email'];
   // Gunakan username dari session sebagai updated_by
   $updated_by = $user_name;
-  $order_total = $_POST['order_total'];
   $customer_status = $_POST['customer_status'];
 
   // Perbarui data order di database
-  $stmt = $conn->prepare("UPDATE orderinfo SET customer_name = ?, customer_email = ?, updated_by = ?, order_total = ?, customer_status = ? WHERE order_id = ?");
-  $stmt->bind_param("sssisi", $customer_name, $customer_email, $updated_by, $order_total, $customer_status, $order_id);
+  $stmt = $conn->prepare("UPDATE orderinfo SET customer_name = ?, customer_email = ?, updated_by = ?, customer_status = ? WHERE order_id = ?");
+  $stmt->bind_param("sssisi", $customer_name, $customer_email, $updated_by, $customer_status, $order_id);
 
   if ($stmt->execute()) {
     header("Location: view_orders.php?success=1");
@@ -29,9 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $stmt->close();
   $conn->close();
 }
-?>
-
-
 ?>
 
 <!doctype html>

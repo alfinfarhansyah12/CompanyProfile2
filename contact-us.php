@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,42 +36,7 @@
 
   <link href="css/style.css" rel="stylesheet">
   <link href="css/responsive.css" rel="stylesheet">
-
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-
-  <!-- Facebook Pixel Code -->
-  <script>
-    ! function(f, b, e, v, n, t, s) {
-      if (f.fbq) return;
-      n = f.fbq = function() {
-        n.callMethod ?
-          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-      };
-      if (!f._fbq) f._fbq = n;
-      n.push = n;
-      n.loaded = !0;
-      n.version = '2.0';
-      n.queue = [];
-      t = b.createElement(e);
-      t.async = !0;
-      t.src = v;
-      s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-      '../connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1257673967966242');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1257673967966242&amp;ev=PageView&amp;noscript=1" /></noscript>
-  <!-- End Facebook Pixel Code -->
-
+  <link rel="stylesheet" href="./css/checkout.css">
 
 </head>
 
@@ -104,27 +72,54 @@
           <div class="left_ex_title">
             <h2>get in <span>touch</span></h2>
           </div>
-
           <form class="contact_us_form row m0" action="#" method="post" id="contactForm" enctype="multipart/form-data">
             <!--<form action="" class="form-validation" autocomplete="off" method="post" id="contactForm" enctype="multipart/form-data"> -->
             <div id="check1"></div>
             <div class="form-group col-md-12">
-              <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+              <label><b>First Name <span class="text-danger">*</span></b></label>
+              <input type="text" name="customer_first_name" id="customer_first_name" class="form-control" value="" />
+              <span id="error_customer_first_name" class="text-danger"></span>
             </div>
             <div class="form-group col-md-12">
-              <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+              <label><b>Email Address <span class="text-danger">*</span></b></label>
+              <input type="text" name="email_address" id="email_address" class="form-control" value="" />
+              <span id="error_email_address" class="text-danger"></span>
             </div>
             <div class="form-group col-md-12">
-              <input type="text" class="form-control" id="number" name="number" placeholder="Phone no." minlength="10"
-                maxlength="10">
+              <label><b>Mobile Number <span class="text-danger">*</span></b></label>
+              <div class="input-group">
+                <span class="input-group-text">+62</span>
+                <input type="number" name="mobile_number" id="mobile_number" class="form-control" />
+              </div>
+              <span id="error_mobile_number" class="text-danger"></span>
             </div>
             <div class="form-group col-md-12">
-              <textarea class="form-control" name="message" id="message" rows="1" placeholder="Message"></textarea>
+              <label><b>Note</span> (Opsional)</b></label>
+              <textarea name="customer_note" id="customer_note" class="form-control"></textarea>
+              <!-- <span id="error_customer_note" class="text-danger"></span> -->
             </div>
-            <div id="check"></div>
-            <div class="form-group col-md-12">
-              <button type="submit" value="submit" id="btn_submit" class="btn submit_btn form-control">submit
-                now</button>
+            <!-- Pengaduan dan Laporan -->
+            <div class="form-group">
+              <label><b>Jenis Layanan <span class="text-danger">*</span></b></label>
+              <div class="form-check">
+                <input type="radio" name="service_type" id="service_complaint" value="Complaint"
+                  class="form-check-input" />
+                <label class="form-check-label" for="service_complaint">Complaint</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" name="service_type" id="service_pengaduan" value="Pengaduan"
+                  class="form-check-input" />
+                <label class="form-check-label" for="service_pengaduan">Pengaduan</label>
+              </div>
+              <span id="error_service_type" class="text-danger"></span>
+            </div>
+
+            <hr style="margin-top:1.5em;" />
+            <div class="form-group">
+              <input type="checkbox" name="agree_checkbox" id="agree_checkbox">
+              <label><b>I have read and agree to the website terms and conditions *</b></label>
+              <br>
+              <span id="error_agree_checkbox" class="text-danger"></span>
             </div>
           </form>
         </div>
@@ -133,56 +128,22 @@
             <div class="contact_info_title">
               <h3>Contact info</h3>
               <p>Have any Queries? Let us know. We will clear it for you at the best.</p>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.6176864598497!2d107.01206247355373!3d-6.181895660569424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698964e8543e6b%3A0x54fc3b3451bf0e3d!2sJl.%20Marrakash%20Square%2C%20Bahagia%2C%20Kec.%20Babelan%2C%20Kabupaten%20Bekasi%2C%20Jawa%20Barat%2017610!5e0!3m2!1sid!2sid!4v1733077514170!5m2!1sid!2sid"
+                width="80%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+          </div>
+        </div>
+        <div class="checkout">
+          <div class="place_order">
+            <button type="submit" value="submit" id="place_order" class="btn-success">submit
+              now</button>
           </div>
         </div>
       </div>
     </div>
-    </div>
-    </div>
-    </div>
   </section>
-  <!--================End Get Contact Area =================-->
-  <!--      <section class="get_contact_area emails">
-            <div class="container">
-                <div class="row get_contact_inner">
-                    <div class="col-md-3">
-                        <div class="thumb"><p>info@shivnerifortvalley.com</p></div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="thumb"><p> info@shivnerifortvalley.com</p></div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="thumb"><p>booking@shivnerifortvalley.com</p></div>
-                    </div>
-                    <div class="col-md-3">
-                       <div class="thumb"> <p> marketing@shivnerifortvalley.com</p></div>
-                    </div>
-                    <div class="col-md-3">
-                       <div class="thumb"> <p> director@shivnerifortvalley.com</p></div>
-                    </div>
-                    <div class="col-md-3">
-                       <div class="thumb"> <p>kaveri@shivnerifortvalley.com</p></div>
-                    </div>
-                    <div class="col-md-3">
-                       <div class="thumb"> <p>  shlok@shivnerifortvalley.com</p></div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="thumb"><p>   prasad@shivnerifortvalley.com</p></div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="thumb"><p>   suresh@shivnerifortvalley.com</p></div>
-                    </div>
-                    <div class="col-md-3">
-                       <div class="thumb"> <p>   kiran@shivnerifortvalley.com</p></div>
-                    </div>
-                    <div class="col-md-3">
-                       <div class="thumb"> <p>   arun@shivnerifortvalley.com</p></div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-  <!--================Map Area =================-->
   <section>
 
     <!-- <iframe
@@ -193,82 +154,30 @@
   </section>
   <!--================End Map Area =================-->
 
-  <script src="../ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#contactForm').submit(function(e) {
-        //alert('hi');
-        e.preventDefault();
-        var name = $('#name').val();
-        var email = $('#email').val();
-        var number = $('#number').val();
-        var message = $('#message').val();
-        var error = false;
-        var flg = 1;
+  <!-- jquery js file  -->
+  <script src="./plugins/jquery-3.6.0/jquery.min.js"></script>
 
-        var name_regex = "^[a-zA-Z\\s]*$";
-        var email_regex =
-          /\b(^(\S+@).+((\.com)|(\.net)|(\.edu)|(\.mil)|(\.gov)|(\.org)|(\.info)|(\.in)|(\.biz)|(\.aero)|(\.coop)|(\.museum)|(\.name)|(\.pro)|(\..{2,2}))$)\b/gi;
-        var mobile_regex = /\d{10}/;
+  <!-- bootstrap js file-->
+  <script src="./plugins/bootstrap-5.1.3/js/bootstrap.min.js"></script>
 
-        if (!name.match(name_regex) || name == "") {
-          $('#check1').php('** Please Enter your Name **').css("color", "red");
-          $("#name").focus();
-          var error = true;
-          return false;
-        }
-        if (!email.match(email_regex) || email == "") {
-          $('#check1').php('** Please Enter Your Email Id **').css("color", "red");
-          $("#email").focus();
-          var error = true;
-          return false;
-        }
-        if (!number.match(mobile_regex) || number == "") {
-          $('#check1').php('** Please Enter Your Mobile Number **').css("color", "red");
-          $("#number").focus();
-          var error = true;
-          return false;
-        }
-        if (message == "") {
-          $('#check1').php('** Please Enter Your Message **').css("color", "red");
-          $("#message").focus();
-          var error = true;
-          return false;
-        }
+  <!-- sweetalert2 js file -->
+  <script src="./plugins/sweetalert2/sweetalert2.js"></script>
 
+  <script src=" ./js/form_validation.js"></script>
 
-        if (error != true) {
-          $('#btn_submit').attr({
-            'disabled': 'true',
-            'value': 'Sending...'
-          });
-          var form = $('#contactForm')[0];
-          var formData = new FormData(form);
-          $.ajax({
-            url: "contact_valid.php",
-            type: "POST",
-            data: formData,
-            contentType: false,
-            cache: false,
-            processData: false,
-            success: function(data) {
+  <script src="js/backButton.js"></script>
 
-
-              if (data == 'sent') {
-                $('#btn_submit').removeAttr('disabled').attr('value', 'Sent')
-                $('#check1').php(data).css("color", "green");
-                $("#contactForm").get(0).reset();
-
-              } else {
-                $('#btn_submit').removeAttr('disabled').attr('value', 'Retry');
-                $('#check1').php(data).css("color", "red");
-              }
-            }
-          });
-          return false;
-        }
-      });
-    });
+  <script>
+  document.getElementById('mobile_number').addEventListener('input', function(e) {
+    const input = e.target;
+    let value = input.value;
+    // Remove leading zero(s) if present
+    if (value.startsWith('0')) {
+      value = value.substring(1);
+    }
+    // Update the input value
+    input.value = value;
+  });
   </script>
 
   <!--================Footer Area =================-->
@@ -302,9 +211,6 @@
           <strong>Enquiry</strong></a></div>
     </div>
   </section>
-
-
-
 
   <!--================End Footer Area =================-->
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -394,303 +300,17 @@
                           style="font-size:30px;color:#4d1b00"></i></a></li>
                   </ul>
                 </div>
-
-
               </div>
             </div>
-
           </form>
         </div>
-
       </div>
-
     </div>
   </div>
-
-
-
-  <div class="modal " id="myModal1" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title" data-toggle="modal" data-target="#myModal1">Booking Now</h4>
-        </div>
-        <div class="modal-body">
-          <form action="https://www.shivnerifortvalley.com/payment.php" method="post" enctype="multipart/form-data">
-            <div class="form-group row">
-              <div class="col-md-12">
-                <label for="exampleInputEmail1">Name</label>
-                <input type="text" class="form-control" name="name" id="name" aria-describedby="emailHelp" required>
-                <input type="hidden" class="form-control" name="amount" id="amount" value="2400" />
-                <input type="hidden" name="extraamount" class="form-control" id="extraamount" value="299">
-                <input type="hidden" name="room" id="room" class="form-control" class="form-control" value="Valley">
-              </div>
-            </div>
-            <div class="form-group row">
-              <div class="col-md-12">
-                <label for="exampleInputPassword1">Email</label>
-                <input type="email" class="form-control" name="email" id="email" required>
-              </div>
-            </div>
-            <div class="form-group row">
-              <div class="col-md-12">
-                <label for="exampleInputEmail1">Phone Number</label>
-                <input type="text" class="form-control" name="phone" id="phone" aria-describedby="emailHelp"
-                  maxlength="10" required>
-              </div>
-            </div>
-
-
-            <div class="form-group row">
-              <div class="col-md-6">
-                <label for="exampleInputEmail1">Arrival Date</label>
-                <div class="form-group">
-                  <div class='input-group date datetimepicker'>
-                    <input type='text' name="arrival_date" id="arrival_date" class="form-control" / required>
-                    <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class='col-md-6'>
-                <label for="exampleInputEmail1">Departure Date</label>
-                <div class="form-group">
-                  <div class='input-group date datetimepicker'>
-                    <input type='text' name="departure_date" id="departure_date" class="form-control" / required>
-                    <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="form-group row">
-              <div class="col-md-6">
-                <label for="">Adults</label>
-                <select name="adults" id="adults" class="form-control" required>
-                  <option value="">Select Adults</option>
-                  <option value="1">Adults</option>
-                  <option value="2">Adults Two</option>
-                  <option value="3">Adults Three</option>
-                </select>
-              </div>
-
-
-              <div class="col-md-6">
-                <label for="">Children</label>
-                <select name="children" id="children" class="form-control" required>
-                  <option value="">Select Children</option>
-                  <option value="1">Children</option>
-                  <option value="2">Children Two</option>
-                  <option value="3">Children Three</option>
-                </select>
-              </div>
-
-            </div>
-
-            <button type="submit" class="btn">Book Now</button>
-          </form>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-  <div class="modal " id="myModal2" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title" data-toggle="modal" data-target="#myModal1">Booking Now</h4>
-        </div>
-        <div class="modal-body">
-          <form action="https://www.shivnerifortvalley.com/payment.php" method="post" enctype="multipart/form-data">
-            <div class="form-group row">
-              <div class="col-md-12">
-                <label for="exampleInputEmail1">Name</label>
-                <input type="text" class="form-control" name="name" id="name" aria-describedby="emailHelp" required>
-                <input type="hidden" class="form-control" name="amount" id="amount" value="1999" />
-                <input type="hidden" name="extraamount" id="extraamount" value="299" />
-                <input type="hidden" name="room" id="room" class="form-control" value="Lawn">
-              </div>
-            </div>
-            <div class="form-group row">
-              <div class="col-md-12">
-                <label for="exampleInputPassword1">Email</label>
-                <input type="email" class="form-control" name="email" id="email" required>
-              </div>
-            </div>
-            <div class="form-group row">
-              <div class="col-md-12">
-                <label for="exampleInputEmail1">Phone Number</label>
-                <input type="text" class="form-control" name="phone" id="phone" aria-describedby="emailHelp"
-                  maxlength="10" required>
-              </div>
-            </div>
-
-
-            <div class="form-group row">
-              <div class="col-md-6">
-                <label for="exampleInputEmail1">Arrival Date</label>
-                <div class="form-group">
-                  <div class='input-group date datetimepicker'>
-                    <input type='text' name="arrival_date" id="arrival_date" class="form-control" / required>
-                    <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class='col-md-6'>
-                <label for="exampleInputEmail1">Departure Date</label>
-                <div class="form-group">
-                  <div class='input-group date datetimepicker'>
-                    <input type='text' name="departure_date" id="departure_date" class="form-control" / required>
-                    <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="form-group row">
-              <div class="col-md-6">
-                <label for="">Adults</label>
-                <select name="adults" id="adults" class="form-control" required>
-                  <option value="">Select Adults</option>
-                  <option value="1">Adults</option>
-                  <option value="2">Adults Two</option>
-                  <option value="3">Adults Three</option>
-                </select>
-              </div>
-              <div class="col-md-6">
-                <label for="">children</label>
-                <select name="children" id="children" class="form-control" required>
-                  <option value="">Select Children</option>
-                  <option value="1">Children</option>
-                  <option value="2">Children Two</option>
-                  <option value="3">Children Three</option>
-                </select>
-              </div>
-
-            </div>
-
-
-            <button type="submit" class="btn">Book Now</button>
-          </form>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-  <div class="modal " id="myModal3" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title" data-toggle="modal" data-target="#myModal1">Booking Now</h4>
-        </div>
-        <div class="modal-body">
-          <form action="https://www.shivnerifortvalley.com/payment.php" method="post" enctype="multipart/form-data">
-            <div class="form-group row">
-              <div class="col-md-12">
-                <label for="exampleInputEmail1">Name</label>
-                <input type="text" class="form-control" name="name" id="name" aria-describedby="emailHelp" required>
-                <input type="hidden" class="form-control" name="amount" id="amount" value="4000" />
-                <input type="hidden" name="extraamount" id="extraamount" value="299" />
-                <input type="hidden" name="room" id="room" class="form-control" value="Villa">
-              </div>
-            </div>
-            <div class="form-group row">
-              <div class="col-md-12">
-                <label for="exampleInputPassword1">Email</label>
-                <input type="email" class="form-control" name="email" id="email" required>
-              </div>
-            </div>
-            <div class="form-group row">
-              <div class="col-md-12">
-                <label for="exampleInputEmail1">Phone Number</label>
-                <input type="text" class="form-control" name="phone" id="phone" aria-describedby="emailHelp"
-                  maxlength="10" required>
-              </div>
-            </div>
-
-
-            <div class="form-group row">
-              <div class="col-md-6">
-                <label for="exampleInputEmail1">Arrival Date</label>
-                <div class="form-group">
-                  <div class='input-group date datetimepicker'>
-                    <input type='text' name="arrival_date" id="arrival_date" class="form-control" / required>
-                    <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class='col-md-6'>
-                <label for="exampleInputEmail1">Departure Date</label>
-                <div class="form-group">
-                  <div class='input-group date datetimepicker'>
-                    <input type='text' name="departure_date" id="departure_date" class="form-control" / required>
-                    <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="form-group row">
-              <div class="col-md-6">
-                <label for="">Adults</label>
-                <select name="adults" id="adults" class="form-control" required>
-                  <option value="">Select Adults</option>
-                  <option value="1">Adults</option>
-                  <option value="2">Adults Two</option>
-                  <option value="3">Adults Three</option>
-                </select>
-              </div>
-              <div class="col-md-6">
-                <label for="">children</label>
-                <select name="children" id="children" class="form-control" required>
-                  <option value="">Select Children</option>
-                  <option value="1">Children</option>
-                  <option value="2">Children Two</option>
-                  <option value="3">Children Three</option>
-                </select>
-              </div>
-
-            </div>
-
-            <button type="submit" class="btn">Book Now</button>
-          </form>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-</div>
-<script type="text/javascript">
+  <script type="text/javascript">
   $(function() {
     $('.datetimepicker').datetimepicker();
   });
-</script>
+  </script>
 
 </html>

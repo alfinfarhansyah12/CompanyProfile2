@@ -30,8 +30,7 @@ if (!isset($_SESSION['admin_id'])) {
 	<link rel="stylesheet" href="../css/tabbed_box.css">
 
 	<!--google material icon-->
-	<link href="https://fonts.googleapis.com/css2?family=Material+Icons"
-		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 
 
 </head>
@@ -103,7 +102,7 @@ if (!isset($_SESSION['admin_id'])) {
 
 													<?php
 													$id = $_GET["id"];
-													$result = mysqli_query($conn, "SELECT order_item_id, order_items.order_id, item_name, item_quantity, toppings_price, item_total, order_currency FROM orderinfo , order_items WHERE orderinfo.order_id=$id and order_items.order_id=$id;");
+													$result = mysqli_query($conn, "SELECT order_item_id, order_items.order_id, item_name, item_quantity, toppings_price, item_total FROM orderinfo , order_items WHERE orderinfo.order_id=$id and order_items.order_id=$id;");
 													while ($row = mysqli_fetch_assoc($result)) {
 
 														$query2 = "SELECT item_image,item_price From menuitem where item_name='" . $row['item_name'] . "'";
@@ -131,8 +130,6 @@ if (!isset($_SESSION['admin_id'])) {
 															</td>
 															<td><?php echo $row['toppings_price'] ?></td>
 															<td><?php echo $row['item_total']; ?></td>
-															<td><?php echo $row['order_currency'] ?></td>
-
 														<?php } ?>
 
 

@@ -7558,24 +7558,37 @@ td {
 
 /* ALFIN */
 
-@font-face {
-  font-family: 'DancingScript';
-  src: url('../fonts/DancingScript-Regular.ttf') format('truetype');
+.place_order {
+  width: 90%;
+}
+
+.checkout .btn-success {
+  border-radius: 0.5em;
+  font-size: 1.3rem;
+  margin-bottom: 1em;
+  cursor: pointer;
+  align-self: flex-start;
+  margin: auto;
 }
 
 @font-face {
-  font-family: 'Nunito';
-  src: url('../fonts/Nunito-Regular.ttf') format('truetype');
+  font-family: "DancingScript";
+  src: url("../fonts/DancingScript-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Satisfy';
-  src: url('../fonts/Satisfy-Regular.ttf') format('truetype');
+  font-family: "Nunito";
+  src: url("../fonts/Nunito-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Satisfy";
+  src: url("../fonts/Satisfy-Regular.ttf") format("truetype");
 }
 
 :root {
   --green: #27ae60;
-  --light-green:  rgb(106, 230, 106);
+  --light-green: rgb(106, 230, 106);
   --black: #192a56;
   --orange: #ffb674;
   --dark-orange: #fc8d67;
@@ -7597,17 +7610,15 @@ td {
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  outline:none;
+  outline: none;
   border: none;
   text-transform: capitalize;
   transition: all 0.2s linear;
-  
 }
 
-
-*::selection{
+*::selection {
   background-color: var(--light-orange);
-  color:#fff;
+  color: #fff;
 }
 
 html {
@@ -7619,11 +7630,11 @@ html {
 }
 
 /*************** Scrollbar ****************/
-html::-webkit-scrollbar{
-  width:1rem;
+html::-webkit-scrollbar {
+  width: 1rem;
 }
 
-html::-webkit-scrollbar-thumb{
+html::-webkit-scrollbar-thumb {
   background: var(--dark-orange);
   border-radius: 5rem;
 }
@@ -7643,7 +7654,7 @@ section:nth-child(even) {
   color: var(--green2);
   font-size: 2rem;
   padding-top: 1rem;
-  font-family: 'Satisfy', cursive;
+  font-family: "Satisfy", cursive;
 }
 
 .heading {
@@ -7651,7 +7662,7 @@ section:nth-child(even) {
   color: var(--black);
   font-size: 3rem;
   padding-bottom: 2rem;
-  text-transform: uppercase; 
+  text-transform: uppercase;
 }
 
 .btn {
@@ -7669,8 +7680,6 @@ section:nth-child(even) {
   background: var(--orange);
   letter-spacing: 0.1rem;
 }
-
-
 
 /***************** footer ****************/
 
@@ -7757,7 +7766,6 @@ a {
 }
 
 @media (max-width: 768px) {
-
   .home .home-slider .slide .content h3 {
     font-size: 5rem;
   }
@@ -7767,5 +7775,4 @@ a {
   html {
     font-size: 50%;
   }
-
 }

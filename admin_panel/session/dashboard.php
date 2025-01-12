@@ -25,6 +25,8 @@ if (!isset($_SESSION['manager_id']) && !isset($_SESSION['admin_id'])) {
   <link rel="stylesheet" href="../../plugins/bootstrap-5.1.3/css/bootstrap.min.css">
 
 
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   <!--  Iconify SVG framework link -->
   <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 
@@ -147,8 +149,7 @@ if (!isset($_SESSION['manager_id']) && !isset($_SESSION['admin_id'])) {
             <div class="card card-stats">
               <div class="card-header">
                 <div class="icon icon-rose">
-                  <span class="material-icons">shopping_cart</span>
-
+                  <span class="material-icons">support_agent</span>
                 </div>
               </div>
               <div class="card-content">
@@ -166,12 +167,12 @@ if (!isset($_SESSION['manager_id']) && !isset($_SESSION['admin_id'])) {
           </div>
 
           <div class="col-lg-3 col-md-6 col-sm-6">
-            <?php
+            <!-- <?php
 
-            $result = mysqli_query($conn, "SELECT SUM(order_total) as nb FROM orderinfo");
-            $row = mysqli_fetch_assoc($result);
+                  $result = mysqli_query($conn, "SELECT SUM(order_total) as nb FROM orderinfo");
+                  $row = mysqli_fetch_assoc($result);
 
-            ?>
+                  ?> -->
             <div class="card card-stats">
               <div class="card-header">
                 <div class="icon icon-success">
@@ -180,9 +181,9 @@ if (!isset($_SESSION['manager_id']) && !isset($_SESSION['admin_id'])) {
                 </div>
               </div>
               <div class="card-content">
-                <p class="category"><strong>Revenue</strong></p>
-                <h5 class="card-title " style="color: green;">Rp <?php echo number_format($row['nb'], 0, ',', '.'); ?>
-                </h5>
+                <p class="category"><strong>Coming Soon!</strong></p>
+                <!-- <h5 class="card-title " style="color: green;">Rp <?php echo number_format($row['nb'], 0, ',', '.'); ?>
+                </h5> -->
               </div>
               <div class="card-footer">
                 <div class="stats">
@@ -218,8 +219,6 @@ if (!isset($_SESSION['manager_id']) && !isset($_SESSION['admin_id'])) {
               </div>
             </div>
           </div>
-          <B style="color:red">BENAHIN BAGIAN DASHBOARD</B>
-          <!-- ALFIN -->
         </div>
       </div>
     </div>
